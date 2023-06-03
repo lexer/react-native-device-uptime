@@ -4,7 +4,6 @@ import android.os.SystemClock
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
-import com.facebook.react.bridge.Promise
 
 class DeviceUptimeModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule(reactContext) {
 
@@ -13,7 +12,7 @@ class DeviceUptimeModule(reactContext: ReactApplicationContext) : ReactContextBa
     }
 
     @ReactMethod(isBlockingSynchronousMethod = true)
-    fun Int getUptime(promise: Promise) {
+    fun Int getUptime() {
       return SystemClock.elapsedRealtime()
     }
 
