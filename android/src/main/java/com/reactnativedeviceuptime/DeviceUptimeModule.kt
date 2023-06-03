@@ -12,7 +12,7 @@ class DeviceUptimeModule(reactContext: ReactApplicationContext) : ReactContextBa
     }
 
     @ReactMethod(isBlockingSynchronousMethod = true)
-    fun Long getUptime() {
+    fun getUptime(): Long {
       return SystemClock.elapsedRealtime()
     }
 
