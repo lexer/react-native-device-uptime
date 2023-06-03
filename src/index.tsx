@@ -1,7 +1,7 @@
 import { NativeModules } from 'react-native';
 
 export type DeviceUptimeType = {
-  getUptime: () => string;
+  getUptime: () => number;
 };
 
 const { DeviceUptime } = NativeModules;
