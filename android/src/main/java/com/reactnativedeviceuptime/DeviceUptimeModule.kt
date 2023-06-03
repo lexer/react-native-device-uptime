@@ -12,7 +12,7 @@ class DeviceUptimeModule(reactContext: ReactApplicationContext) : ReactContextBa
         return "DeviceUptime"
     }
 
-    @ReactMethod
+    @ReactMethod(isBlockingSynchronousMethod = true)
     fun getUptime(promise: Promise) {
       var uptime = SystemClock.elapsedRealtime().toString()
       promise.resolve(uptime)
